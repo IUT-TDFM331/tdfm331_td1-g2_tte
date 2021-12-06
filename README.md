@@ -46,5 +46,5 @@ codes couvert/non couverts par les tests.
 
 ## Contributors
 - Emeric Maximil, Theo Stringat, Toa Foloka
-
+- Bonjour
 
