@@ -143,4 +143,32 @@ public class ListApiServiceTest {
             Assertions.assertNotNull(e);
         }
     }
+
+    /**
+     *Test to check if we can find Object when meeting exist
+     */
+    @Test
+    public void FindByObjectWhenMeetingExist(){
+        List<Employee> listEmployees = Arrays.asList(new Employee("Baptiste", "baptiste@lamzone.com", 4),
+                new Employee("Fanny", "fanny@lamzone.com", 10),
+                new Employee("Vincent", "vincent@lamzone.com", 22));
+
+        Meeting newMeeting = new Meeting("Réunion d'avancement",
+                "Planck",
+                "12/11/20",
+                "15:30",
+                "16:00",
+                "Revues des dernières actions",
+                listEmployees);
+        service.addMeeting(newMeeting);
+
+        try {
+            Meeting found = service.findByObject("Réunion d'avancement");
+            assertEquals(found, newMeeting);
+        } catch (MeetingNotFound e) {
+            Assertions.fail("La reunion devrait etre trouvée");
+            e.printStackTrace();
+        }
+
+    }
 }
