@@ -94,4 +94,53 @@ public class ListApiServiceTest {
             Assertions.assertNotNull(e);
         }
     }
+
+    @Test
+    public void findByNameWhenEmployeeExistWithSuccess() throws EmployeeNotFound {
+        // Create list Employee
+        List<Employee> listEmployees = Arrays.asList(new Employee("Baptiste", "baptiste@lamzone.com", 4),
+                new Employee("Fanny", "fanny@lamzone.com", 10),
+                new Employee("Vincent", "vincent@lamzone.com", 22));
+
+        // Create list Meeting
+        Meeting newMeeting = new Meeting("Réunion d'avancement",
+                "Planck",
+                "12/11/20",
+                "15:30",
+                "16:00",
+                "Revues des dernières actions",
+                listEmployees);
+
+        // Add Meeting
+        service.addMeeting(newMeeting);
+        Assert.assertTrue(service.findByName("Fanny").getName() == "Fanny" );
+        Assert.assertTrue(service.findByName("Fanny").getEmail() == "fanny@lamzone.com" );
+        Assert.assertTrue(service.findByName("Fanny").getId() == 10 );
+    }
+
+    @Test
+    public void findByNameWhenEmployeeNoExistWithSuccess() throws EmployeeNotFound {
+        // Create list Employee
+        List<Employee> listEmployees = Arrays.asList(new Employee("Baptiste", "baptiste@lamzone.com", 4),
+                new Employee("Fanny", "fanny@lamzone.com", 10),
+                new Employee("Vincent", "vincent@lamzone.com", 22));
+
+        // Create list Meeting
+        Meeting newMeeting = new Meeting("Réunion d'avancement",
+                "Planck",
+                "12/11/20",
+                "15:30",
+                "16:00",
+                "Revues des dernières actions",
+                listEmployees);
+
+        // Add Meeting
+        service.addMeeting(newMeeting);
+        try{
+            service.findByName("Antoine");
+            Assertions.fail("Problème dans le programme");
+        }catch(EmployeeNotFound e){
+            Assertions.assertNotNull(e);
+        }
+    }
 }
