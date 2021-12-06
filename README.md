@@ -46,6 +46,9 @@ codes couvert/non couverts par les tests.
 
 ## Contributors 
 ```java
-//TODO
+/*
+Emeric Maximil 
+Théo Stringat
+Toa Foloka*/
 ```
 
