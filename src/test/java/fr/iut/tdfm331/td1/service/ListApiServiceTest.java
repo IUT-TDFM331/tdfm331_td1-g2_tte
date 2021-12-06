@@ -6,11 +6,12 @@ import org.hamcrest.collection.IsIterableContainingInAnyOrder;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 /**
  * Unit test file to test ListApiService class
@@ -67,7 +68,7 @@ public class ListApiServiceTest {
 
         // Add Meeting
         service.addMeeting(newMeeting);
-        Assert.assertTrue(service.getListMeetings().contains(newMeeting));
+        assertTrue(service.getListMeetings().contains(newMeeting));
     }
 
     /**
@@ -79,5 +80,18 @@ public class ListApiServiceTest {
         Meeting meetingToRemove = service.getListMeetings().get(0);
         service.getListMeetings().remove(meetingToRemove);
         Assert.assertFalse(service.getListMeetings().contains(meetingToRemove));
+    }
+
+    /**
+     * Test to check
+     */
+    @Test
+    public void findByObjectWhenMeetingNotExist() {
+        try {
+            service.findByObject("meeting");
+            Assertions.fail("Le meeting ne doit pas exister !");
+        } catch (MeetingNotFound e) {
+            Assertions.assertNotNull(e);
+        }
     }
 }
