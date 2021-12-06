@@ -1,0 +1,150 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > ListEmployeesGenerator</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">fr.iut.tdfm331.td1.service</a>
+</div>
+
+<h1>Coverage Summary for Class: ListEmployeesGenerator (fr.iut.tdfm331.td1.service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ListEmployeesGenerator</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66,7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66,7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package fr.iut.tdfm331.td1.service;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import fr.iut.tdfm331.td1.model.Employee;
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;import java.util.Arrays;
+<i class="no-highlight">6</i>&nbsp;import java.util.List;
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;/**
+<i class="no-highlight">9</i>&nbsp; * This class generates a predefined list of @{@link Employee}
+<i class="no-highlight">10</i>&nbsp; */
+<b class="nc"><i class="no-highlight">11</i>&nbsp;public abstract class ListEmployeesGenerator {</b>
+<i class="no-highlight">12</i>&nbsp;
+<b class="fc"><i class="no-highlight">13</i>&nbsp;    public static List&lt;Employee&gt; LIST_EMPLOYEES = Arrays.asList(</b>
+<i class="no-highlight">14</i>&nbsp;            new Employee(&quot;Alexandra&quot;, &quot;alexandra@lamzone.com&quot;, 1),
+<i class="no-highlight">15</i>&nbsp;            new Employee(&quot;Amanda&quot;, &quot;amanda@lamzone.com&quot;, 2),
+<i class="no-highlight">16</i>&nbsp;            new Employee(&quot;Arthur&quot;, &quot;arthur@lamzone.com&quot;, 3),
+<i class="no-highlight">17</i>&nbsp;            new Employee(&quot;Baptiste&quot;, &quot;baptiste@lamzone.com&quot;, 4),
+<i class="no-highlight">18</i>&nbsp;            new Employee(&quot;Caroline&quot;, &quot;caroline@lamzone.com&quot;, 5),
+<i class="no-highlight">19</i>&nbsp;            new Employee(&quot;Corentin&quot;, &quot;corentin@lamzone.com&quot;, 6),
+<i class="no-highlight">20</i>&nbsp;            new Employee(&quot;Delphine&quot;, &quot;delphine@lamzone.com&quot;, 7),
+<i class="no-highlight">21</i>&nbsp;            new Employee(&quot;Emilie&quot;, &quot;emilie@lamzone.com&quot;, 8),
+<i class="no-highlight">22</i>&nbsp;            new Employee(&quot;Francis&quot;, &quot;francis@lamzone.com&quot;, 9),
+<i class="no-highlight">23</i>&nbsp;            new Employee(&quot;Fanny&quot;, &quot;fanny@lamzone.com&quot;, 10),
+<i class="no-highlight">24</i>&nbsp;            new Employee(&quot;Farah&quot;, &quot;farah@lamzone.com&quot;, 11),
+<i class="no-highlight">25</i>&nbsp;            new Employee(&quot;Jérémy&quot;, &quot;jeremy@lamzone.com&quot;, 12),
+<i class="no-highlight">26</i>&nbsp;            new Employee(&quot;Margaux&quot;, &quot;margaux@lamzone.com&quot;, 13),
+<i class="no-highlight">27</i>&nbsp;            new Employee(&quot;Marion&quot;, &quot;marion@lamzone.com&quot;, 14),
+<i class="no-highlight">28</i>&nbsp;            new Employee(&quot;Medhi&quot;, &quot;medhi@lamzone.com&quot;, 15),
+<i class="no-highlight">29</i>&nbsp;            new Employee(&quot;Ming&quot;, &quot;ming@lamzone.com&quot;, 16),
+<i class="no-highlight">30</i>&nbsp;            new Employee(&quot;Nicolas&quot;, &quot;nicolas@lamzone.com&quot;, 17),
+<i class="no-highlight">31</i>&nbsp;            new Employee(&quot;Omar&quot;, &quot;omar@lamzone.com&quot;, 18),
+<i class="no-highlight">32</i>&nbsp;            new Employee(&quot;Patricia&quot;, &quot;patricia@lamzone.com&quot;, 19),
+<i class="no-highlight">33</i>&nbsp;            new Employee(&quot;Polina&quot;, &quot;polina@lamzone.com&quot;, 20),
+<i class="no-highlight">34</i>&nbsp;            new Employee(&quot;Véronica&quot;, &quot;veronica@lamzone.com&quot;, 21),
+<i class="no-highlight">35</i>&nbsp;            new Employee(&quot;Vincent&quot;, &quot;vincent@lamzone.com&quot;, 22),
+<i class="no-highlight">36</i>&nbsp;            new Employee(&quot;Yassine&quot;, &quot;yassine@lamzone.com&quot;, 23),
+<i class="no-highlight">37</i>&nbsp;            new Employee(&quot;Youssef&quot;, &quot;youssef@lamzone.com&quot;, 24),
+<i class="no-highlight">38</i>&nbsp;            new Employee(&quot;Zven&quot;, &quot;zven@lamzone.com&quot;, 25)
+<i class="no-highlight">39</i>&nbsp;    );
+<i class="no-highlight">40</i>&nbsp;
+<i class="no-highlight">41</i>&nbsp;    public static List&lt;Employee&gt; generateListEmployee() {
+<i class="no-highlight">42</i>&nbsp;
+<b class="fc"><i class="no-highlight">43</i>&nbsp;        return LIST_EMPLOYEES;</b>
+<i class="no-highlight">44</i>&nbsp;    }
+<i class="no-highlight">45</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-12-06 15:36</div>
+</div>
+</body>
+</html>
