@@ -1,0 +1,187 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > ListMeetingsGenerator</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">fr.iut.tdfm331.td1.service</a>
+</div>
+
+<h1>Coverage Summary for Class: ListMeetingsGenerator (fr.iut.tdfm331.td1.service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ListMeetingsGenerator</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66,7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    96,7%
+  </span>
+  <span class="absValue">
+    (29/30)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package fr.iut.tdfm331.td1.service;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import fr.iut.tdfm331.td1.model.Employee;
+<i class="no-highlight">4</i>&nbsp;import fr.iut.tdfm331.td1.model.Meeting;
+<i class="no-highlight">5</i>&nbsp;
+<i class="no-highlight">6</i>&nbsp;import java.util.ArrayList;
+<i class="no-highlight">7</i>&nbsp;import java.util.Arrays;
+<i class="no-highlight">8</i>&nbsp;import java.util.List;
+<i class="no-highlight">9</i>&nbsp;
+<i class="no-highlight">10</i>&nbsp;/**
+<i class="no-highlight">11</i>&nbsp; * This class generates a predefined list of @{@link Meeting}
+<i class="no-highlight">12</i>&nbsp; */
+<b class="nc"><i class="no-highlight">13</i>&nbsp;public abstract class ListMeetingsGenerator {</b>
+<i class="no-highlight">14</i>&nbsp;
+<i class="no-highlight">15</i>&nbsp;    // Predefined lists of Employee for different Meeting
+<b class="fc"><i class="no-highlight">16</i>&nbsp;    private static final List&lt;Employee&gt; LIST_EMPLOYEE_MEETING_1 = Arrays.asList(</b>
+<b class="fc"><i class="no-highlight">17</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(0),</b>
+<b class="fc"><i class="no-highlight">18</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(1),</b>
+<b class="fc"><i class="no-highlight">19</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(23)</b>
+<i class="no-highlight">20</i>&nbsp;    );
+<i class="no-highlight">21</i>&nbsp;
+<b class="fc"><i class="no-highlight">22</i>&nbsp;    private static final List&lt;Employee&gt; LIST_EMPLOYEE_MEETING_2 = Arrays.asList(</b>
+<b class="fc"><i class="no-highlight">23</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(0),</b>
+<b class="fc"><i class="no-highlight">24</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(2),</b>
+<b class="fc"><i class="no-highlight">25</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(10),</b>
+<b class="fc"><i class="no-highlight">26</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(12),</b>
+<b class="fc"><i class="no-highlight">27</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(17),</b>
+<b class="fc"><i class="no-highlight">28</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(21)</b>
+<i class="no-highlight">29</i>&nbsp;    );
+<i class="no-highlight">30</i>&nbsp;
+<b class="fc"><i class="no-highlight">31</i>&nbsp;    private static final List&lt;Employee&gt; LIST_EMPLOYEE_MEETING_3 = Arrays.asList(</b>
+<b class="fc"><i class="no-highlight">32</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(1),</b>
+<b class="fc"><i class="no-highlight">33</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(22)</b>
+<i class="no-highlight">34</i>&nbsp;    );
+<i class="no-highlight">35</i>&nbsp;
+<b class="fc"><i class="no-highlight">36</i>&nbsp;    private static final List&lt;Employee&gt; LIST_EMPLOYEE_MEETING_4 = Arrays.asList(</b>
+<b class="fc"><i class="no-highlight">37</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(13),</b>
+<b class="fc"><i class="no-highlight">38</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(15),</b>
+<b class="fc"><i class="no-highlight">39</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(19),</b>
+<b class="fc"><i class="no-highlight">40</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(21)</b>
+<i class="no-highlight">41</i>&nbsp;    );
+<i class="no-highlight">42</i>&nbsp;
+<b class="fc"><i class="no-highlight">43</i>&nbsp;    private static final List&lt;Employee&gt; LIST_EMPLOYEE_MEETING_5 = Arrays.asList(</b>
+<b class="fc"><i class="no-highlight">44</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(10),</b>
+<b class="fc"><i class="no-highlight">45</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(12),</b>
+<b class="fc"><i class="no-highlight">46</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(9)</b>
+<i class="no-highlight">47</i>&nbsp;
+<i class="no-highlight">48</i>&nbsp;    );
+<i class="no-highlight">49</i>&nbsp;
+<b class="fc"><i class="no-highlight">50</i>&nbsp;    private static final List&lt;Employee&gt; LIST_EMPLOYEE_MEETING_6 = Arrays.asList(</b>
+<b class="fc"><i class="no-highlight">51</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(4),</b>
+<b class="fc"><i class="no-highlight">52</i>&nbsp;            ListEmployeesGenerator.generateListEmployee().get(5)</b>
+<i class="no-highlight">53</i>&nbsp;    );
+<i class="no-highlight">54</i>&nbsp;
+<b class="fc"><i class="no-highlight">55</i>&nbsp;    public static ArrayList&lt;Meeting&gt; LIST_MEETINGS = new ArrayList&lt;&gt;(</b>
+<b class="fc"><i class="no-highlight">56</i>&nbsp;            Arrays.asList(</b>
+<i class="no-highlight">57</i>&nbsp;                    new Meeting(&quot;Kick-off meeting&quot;, &quot;Faraday&quot;, &quot;08/10/2020&quot;,
+<i class="no-highlight">58</i>&nbsp;                            &quot;10:00&quot;, &quot;11:00&quot;, &quot;Lancement du projet&quot;, LIST_EMPLOYEE_MEETING_1),
+<i class="no-highlight">59</i>&nbsp;                    new Meeting(&quot;Code review&quot;, &quot;Maxwell&quot;, &quot;15/08/2020&quot;,
+<i class="no-highlight">60</i>&nbsp;                            &quot;11:00&quot;, &quot;12:00&quot;, &quot;Revue mise à jour 1.2&quot;, LIST_EMPLOYEE_MEETING_2),
+<i class="no-highlight">61</i>&nbsp;                    new Meeting(&quot;Point hebdo&quot;, &quot;Planck&quot;, &quot;20/08/2020&quot;,
+<i class="no-highlight">62</i>&nbsp;                            &quot;11:00&quot;, &quot;12:00&quot;, &quot;Avancement de la semaine&quot;, LIST_EMPLOYEE_MEETING_3),
+<i class="no-highlight">63</i>&nbsp;                    new Meeting(&quot;Entretien annuel&quot;, &quot;Einstein&quot;, &quot;27/10/2020&quot;,
+<i class="no-highlight">64</i>&nbsp;                            &quot;8:00&quot;, &quot;20:00&quot;, &quot;Point individuel&quot;, LIST_EMPLOYEE_MEETING_4),
+<i class="no-highlight">65</i>&nbsp;                    new Meeting(&quot;Point hebdo&quot;, &quot;Einstein&quot;, &quot;27/10/2020&quot;,
+<i class="no-highlight">66</i>&nbsp;                            &quot;20:00&quot;, &quot;22:00&quot;, &quot;Point d&#39;avancement&quot;, LIST_EMPLOYEE_MEETING_5),
+<i class="no-highlight">67</i>&nbsp;                    new Meeting(&quot;Point hebdo&quot;, &quot;Feynman&quot;, &quot;28/10/2020&quot;,
+<i class="no-highlight">68</i>&nbsp;                            &quot;21:00&quot;, &quot;21:30&quot;, &quot;Point d&#39;avancement&quot;, LIST_EMPLOYEE_MEETING_6),
+<i class="no-highlight">69</i>&nbsp;                    new Meeting(&quot;Point hebdo&quot;, &quot;Planck&quot;, &quot;29/10/2020&quot;,
+<i class="no-highlight">70</i>&nbsp;                            &quot;11:00&quot;, &quot;12:00&quot;, &quot;Avancement de la semaine&quot;, LIST_EMPLOYEE_MEETING_3),
+<i class="no-highlight">71</i>&nbsp;                    new Meeting(&quot;Revue spec&quot;, &quot;Planck&quot;, &quot;30/11/2020&quot;,
+<i class="no-highlight">72</i>&nbsp;                            &quot;9:00&quot;, &quot;10:00&quot;, &quot;&quot;, LIST_EMPLOYEE_MEETING_4),
+<i class="no-highlight">73</i>&nbsp;                    new Meeting(&quot;Validation essais&quot;, &quot;Planck&quot;, &quot;02/12/2020&quot;,
+<i class="no-highlight">74</i>&nbsp;                            &quot;10:00&quot;, &quot;11:00&quot;, &quot;&quot;, LIST_EMPLOYEE_MEETING_1)
+<i class="no-highlight">75</i>&nbsp;            )
+<i class="no-highlight">76</i>&nbsp;    );
+<i class="no-highlight">77</i>&nbsp;
+<i class="no-highlight">78</i>&nbsp;    public static ArrayList&lt;Meeting&gt; generateListMeetings() {
+<i class="no-highlight">79</i>&nbsp;
+<b class="fc"><i class="no-highlight">80</i>&nbsp;        return LIST_MEETINGS;</b>
+<i class="no-highlight">81</i>&nbsp;    }
+<i class="no-highlight">82</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-12-06 15:36</div>
+</div>
+</body>
+</html>
